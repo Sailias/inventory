@@ -61,6 +61,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.2)
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -102,7 +103,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sqlite3 (1.3.8)
     state_machine (1.2.0)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
@@ -120,6 +120,7 @@ GEM
     uglifier (2.3.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
@@ -129,12 +130,13 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails-bootstrap
+  pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
-  sqlite3
   state_machine
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
+  will_paginate (~> 3.0)

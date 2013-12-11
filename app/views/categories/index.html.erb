@@ -1,11 +1,18 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    <div class='pull-right'>
-      <%= link_to "New Category", [:new, :category], class: 'btn btn-success' %>
-    </div>
+<div class="well">
+  <div class='pull-left'>
+    <%= form_tag "", class: 'form-inline', method: 'get' do  %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search" %>
+      </div>
+      <%= submit_tag "Search", class: 'btn btn-default' %>
+    <% end %>
   </div>
-</div>
 
+  <div class='pull-right'>
+    <%= link_to "New Category", [:new, :category], class: 'btn btn-success' %>
+  </div>
+  <div class='clearfix'></div>
+</div>
 
 <% unless @categories.blank? %>
   <h2>Categories</h2>

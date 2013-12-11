@@ -3,7 +3,9 @@ class ItemsController < ApplicationController
   before_filter :load_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    @items = Item
+    @items = @items.where("name LIKE ? OR description LIKE ?", params[:search], params[:search]) unless params[:search].blank?
+    @items = @items.page(params[:page])
   end
 
   def new

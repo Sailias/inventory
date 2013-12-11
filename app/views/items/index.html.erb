@@ -1,14 +1,22 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    <div class='pull-right'>
-      <%= link_to "New Item", [:new, :item], class: 'btn btn-success' %>
-    </div>
+<div class="well">
+  <div class='pull-left'>
+    <%= form_tag "", class: 'form-inline', method: 'get' do  %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search" %>
+      </div>
+      <%= submit_tag "Search", class: 'btn btn-default' %>
+    <% end %>
   </div>
+
+  <div class='pull-right'>
+    <%= link_to "New Item", [:new, :item], class: 'btn btn-success' %>
+  </div>
+  <div class='clearfix'></div>
 </div>
 
 
 <% unless @items.blank? %>
-  <h2>Categories</h2>
+  <h2>Items</h2>
   <table class='table table-striped'>
     <thead>
       <tr>
@@ -20,6 +28,8 @@
     </thead>
     <%= render @items %>
   </table>
+  <%= will_paginate @items %>
+
 <% else %>
   <h2>You do not have any items</h2>
 <% end %>

@@ -1,5 +1,11 @@
 <h2>Name: <%= @item.name %></h2>
-<p><%= @item.description %></p>
+<p>
+  <b>Description</b>
+  <%= @item.description %>
+</p>
+<p>
+  <b>Category</b> <%= @item.category.name %>
+</p>
 
-<%= link_to "Back to List", :categories, class: 'btn btn-default' %>
+<%= link_to "Back to List", :items, class: 'btn btn-default' %>
 <%= link_to "Delete", @item, method: "delete", confirm: 'Are you sure?', class: 'btn btn-danger' %>
