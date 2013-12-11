@@ -1,0 +1,7 @@
+<tr>
+  <td><%= item.name %></td>
+  <td><%= truncate item.description %></td>
+  <td><%= item.category.name %></td>
+  <td><%= item.state %></td>
+  <td class='links'><%= link_to "View", item, class: 'btn btn-info' %>
+</tr>

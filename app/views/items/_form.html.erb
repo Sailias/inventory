@@ -1,0 +1,3 @@
+<%= form.input :name %>
+<%= form.input :description, input_html: {size: "50x7"} %>
+<%= form.input :category_id, collection: Category.all, label: "Category" %>

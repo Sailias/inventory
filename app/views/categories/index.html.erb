@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class='pull-right'>
+      <%= link_to "New Category", [:new, :category], class: 'btn btn-success' %>
+    </div>
+  </div>
+</div>
+
+
+<% unless @categories.blank? %>
+  <h2>Categories</h2>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <%= render @categories %>
+  </table>
+<% else %>
+  <h2>You do not have any categories</h2>
+<% end %>

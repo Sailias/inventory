@@ -1,0 +1,8 @@
+<h2>New Category</h2>
+
+<%= simple_form_for @category do |form| %>
+  <%= render form %>
+  <br />
+  <%= link_to "Cancel", :back, class: 'btn btn-default' %>
+  <%= form.button :submit, class: 'btn-success' %>
+<% end %>

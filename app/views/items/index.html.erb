@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class='pull-right'>
+      <%= link_to "New Item", [:new, :item], class: 'btn btn-success' %>
+    </div>
+  </div>
+</div>
+
+
+<% unless @items.blank? %>
+  <h2>Categories</h2>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    <%= render @items %>
+  </table>
+<% else %>
+  <h2>You do not have any items</h2>
+<% end %>
