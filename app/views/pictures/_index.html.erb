@@ -1,0 +1,7 @@
+<% if pictures.empty? %>
+  <b>You do not have any pictures</b>
+<% else %>
+  <% pictures.each do |picture| %>
+    <%= image_tag picture.image.url(:large) %>
+  <% end %>
+<% end %>

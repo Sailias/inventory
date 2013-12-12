@@ -1,0 +1,8 @@
+<h2>New Picture for Item: "<%= @item.name %>"</h2>
+
+<%= simple_form_for [@item, @picture] do |form| %>
+  <%= render form %>
+  <br />
+  <%= link_to "Cancel", :back, class: 'btn btn-default' %>
+  <%= form.button :submit, class: 'btn-success' %>
+<% end %>

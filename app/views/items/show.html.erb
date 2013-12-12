@@ -1,11 +1,20 @@
-<h2>Name: <%= @item.name %></h2>
-<p>
-  <b>Description</b>
-  <%= @item.description %>
-</p>
-<p>
-  <b>Category</b> <%= @item.category.name %>
-</p>
+<div class='well'>
+  <div class='pull-right'>
+      <%= link_to "Back to List", :items, class: 'btn btn-default' %>
+      <%= link_to "Delete", @item, method: "delete", confirm: 'Are you sure?', class: 'btn btn-danger' %>
+      <%= link_to "Add a Picture", [:new, @item, :picture], class: 'btn btn-success' %>
+  </div>
+  <div class='clearfix'></div>
+</div>
 
-<%= link_to "Back to List", :items, class: 'btn btn-default' %>
-<%= link_to "Delete", @item, method: "delete", confirm: 'Are you sure?', class: 'btn btn-danger' %>
+<h2><%= @item.name %></h2>
+
+<dl class="dl-horizontal">
+  <dt>Description</dt>
+  <dd><%= @item.description %></dd>
+  <dt>Category</dt>
+  <dd><%= @item.category.name %></dd>
+</dl>
+
+<h4>Pictures</h4>
+<%= render "pictures/index", pictures: @item.pictures %>

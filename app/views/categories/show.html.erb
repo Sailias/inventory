@@ -1,3 +1,9 @@
-<h2>Name: <%= @category.name %></h2>
-<%= link_to "Back to List", :categories, class: 'btn btn-default' %>
-<%= link_to "Delete", @category, method: "delete", confirm: 'Are you sure?', class: 'btn btn-danger' %>
+<div class='well'>
+  <div class='pull-right'>
+    <%= link_to "Back to List", :categories, class: 'btn btn-default' %>
+    <%= link_to "Delete", @category, method: "delete", confirm: 'Are you sure?', class: 'btn btn-danger' %>
+  </div>
+  <div class='clearfix'></div>
+</div>
+
+<h2><%= @category.name %></h2>

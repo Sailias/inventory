@@ -5,5 +5,7 @@ Inventory::Application.routes.draw do
   root 'items#index'
 
   resources :categories
-  resources :items
+  resources :items do
+    resources :pictures
+  end
 end
