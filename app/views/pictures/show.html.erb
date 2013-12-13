@@ -1,0 +1,9 @@
+<div class="well">
+  <div class='pull-right'>
+    <%= link_to "Back to Item", @item, class: 'btn btn-default' %>
+    <%= link_to "Delete Picture", [@item, @picture], class: 'btn btn-danger', method: "delete", confirm: "Are you sure?" %>
+  </div>
+  <div class='clearfix'></div>
+</div>
+
+<%= image_tag @picture.image_url %>

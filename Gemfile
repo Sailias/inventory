@@ -38,6 +38,8 @@ gem 'will_paginate', '~> 3.0'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'ebayapi', github: 'jayjzheng/ebay', branch: 'master', require: 'ebay'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

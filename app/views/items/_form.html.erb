@@ -1,3 +1,11 @@
 <%= form.input :name %>
 <%= form.input :description, input_html: {size: "50x7"} %>
-<%= form.input :category_id, collection: Category.all, label: "Category" %>
+<%= form.input :category_id,
+  collection: @categories,
+  as: "grouped_select",
+  label: "Category",
+  label_method: "name",
+  group_method: "sub_categories",
+  group_label_method: "name"
+%>
+<%= form.input :price %>

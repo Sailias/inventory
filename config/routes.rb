@@ -6,6 +6,10 @@ Inventory::Application.routes.draw do
 
   resources :categories
   resources :items do
+    member do
+      post :post_to_ebay
+    end
+
     resources :pictures
   end
 end

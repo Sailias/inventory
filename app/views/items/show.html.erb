@@ -2,10 +2,15 @@
   <div class='pull-right'>
       <%= link_to "Back to List", :items, class: 'btn btn-default' %>
       <%= link_to "Delete", @item, method: "delete", confirm: 'Are you sure?', class: 'btn btn-danger' %>
-      <%= link_to "Add a Picture", [:new, @item, :picture], class: 'btn btn-success' %>
+      <%= link_to "Add a Picture", [:new, @item, :picture], class: 'btn btn-info' %>
+      <% if @item.new? %>
+        <%= link_to "Post to ebay", [:post_to_ebay, @item], class: 'btn btn-success', method: "post", confirm: "Are you sure you want to list this item?" %>
+      <% end %>
   </div>
   <div class='clearfix'></div>
 </div>
+
+<%= render "shared/error_messages", target: @item %>
 
 <h2><%= @item.name %></h2>
 
@@ -13,7 +18,7 @@
   <dt>Description</dt>
   <dd><%= @item.description %></dd>
   <dt>Category</dt>
-  <dd><%= @item.category.name %></dd>
+  <dd><%= "#{@item.category.parent.name} - #{@item.category.name}" %></dd>
 </dl>
 
 <h4>Pictures</h4>

@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/jayjzheng/ebay.git
+  revision: f1d27b9a74a97c0ca6b6d781c38d9b79dc5b2b1f
+  branch: master
+  specs:
+    ebayapi (0.14.1)
+      money (~> 5.1.0)
+      xml-mapping (~> 0.8.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,6 +75,8 @@ GEM
     mini_magick (3.6.0)
       subexec (~> 0.2.1)
     minitest (4.7.5)
+    money (5.1.1)
+      i18n (~> 0.6.0)
     multi_json (1.8.2)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -128,6 +139,7 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     will_paginate (3.0.3)
+    xml-mapping (0.8.1)
 
 PLATFORMS
   ruby
@@ -135,6 +147,7 @@ PLATFORMS
 DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
+  ebayapi!
   jbuilder (~> 1.2)
   jquery-rails
   less-rails-bootstrap
